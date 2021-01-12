@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3486de79-0aaf-48b5-ba1d-f6236915dcf4" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="2" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>stringProject</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Main</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectId" id="1mfTeFHSLBlFUAYtsQWNIIVXcTQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="ProjectNumber1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectNumber1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestClass" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClass.testOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectNumber1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestClass" />
+      <option name="METHOD_NAME" value="testOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClass.testThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectNumber1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestClass" />
+      <option name="METHOD_NAME" value="testThree" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestClass.testTwo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectNumber1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestClass" />
+      <option name="METHOD_NAME" value="testTwo" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TestClass.testTwo" />
+      <item itemvalue="JUnit.TestClass.testOne" />
+      <item itemvalue="JUnit.TestClass" />
+      <item itemvalue="JUnit.TestClass.testThree" />
+      <item itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestClass.testOne" />
+        <item itemvalue="JUnit.TestClass.testTwo" />
+        <item itemvalue="JUnit.TestClass.testThree" />
+        <item itemvalue="JUnit.TestClass" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3486de79-0aaf-48b5-ba1d-f6236915dcf4" name="Default" comment="" />
+      <created>1532457908640</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532457908640</updated>
+      <workItem from="1532457914174" duration="1915000" />
+      <workItem from="1532464246446" duration="88000" />
+      <workItem from="1532531701887" duration="322000" />
+      <workItem from="1532533851314" duration="605000" />
+      <workItem from="1533242072100" duration="602000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3532000" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="208" y="23" width="1024" height="827" key="#Project_Structure" timestamp="1609883825134">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="208" y="23" width="1024" height="827" key="#Project_Structure/0.23.1440.827@0.23.1440.827" timestamp="1609883825134" />
+    <state width="1398" height="195" key="GridCell.Tab.0.bottom" timestamp="1610488028687">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1398" height="195" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1610488028687" />
+    <state width="1398" height="195" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1610069413174" />
+    <state width="1398" height="266" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1609968504900" />
+    <state width="1398" height="195" key="GridCell.Tab.0.center" timestamp="1610488028685">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1398" height="195" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1610488028685" />
+    <state width="1398" height="195" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1610069413173" />
+    <state width="1398" height="266" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1609968504899" />
+    <state width="1398" height="195" key="GridCell.Tab.0.left" timestamp="1610488028683">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1398" height="195" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1610488028683" />
+    <state width="1398" height="195" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1610069413173" />
+    <state width="1398" height="266" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1609968504898" />
+    <state width="1398" height="195" key="GridCell.Tab.0.right" timestamp="1610488028686">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1398" height="195" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1610488028686" />
+    <state width="1398" height="195" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1610069413173" />
+    <state width="1398" height="266" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1609968504899" />
+    <state width="1398" height="266" key="GridCell.Tab.1.bottom" timestamp="1609972879567">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="266" key="GridCell.Tab.1.bottom/0.23.1440.828@0.23.1440.828" timestamp="1609972879567" />
+    <state width="1398" height="266" key="GridCell.Tab.1.bottom/0.23.1440.829@0.23.1440.829" timestamp="1609968504901" />
+    <state width="1398" height="266" key="GridCell.Tab.1.center" timestamp="1609972879566">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="266" key="GridCell.Tab.1.center/0.23.1440.828@0.23.1440.828" timestamp="1609972879566" />
+    <state width="1398" height="266" key="GridCell.Tab.1.center/0.23.1440.829@0.23.1440.829" timestamp="1609968504900" />
+    <state width="1398" height="266" key="GridCell.Tab.1.left" timestamp="1609972879566">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="266" key="GridCell.Tab.1.left/0.23.1440.828@0.23.1440.828" timestamp="1609972879566" />
+    <state width="1398" height="266" key="GridCell.Tab.1.left/0.23.1440.829@0.23.1440.829" timestamp="1609968504900" />
+    <state width="1398" height="266" key="GridCell.Tab.1.right" timestamp="1609972879567">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="266" key="GridCell.Tab.1.right/0.23.1440.828@0.23.1440.828" timestamp="1609972879567" />
+    <state width="1398" height="266" key="GridCell.Tab.1.right/0.23.1440.829@0.23.1440.829" timestamp="1609968504901" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProjectNumber1$TestClass_testOne.ic" NAME="TestClass.testOne Coverage Results" MODIFIED="1610484867496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ProjectNumber1$TestClass_testTwo.ic" NAME="TestClass.testTwo Coverage Results" MODIFIED="1610484796442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ProjectNumber1$TestClass_testThree.ic" NAME="TestClass.testThree Coverage Results" MODIFIED="1610062180501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ProjectNumber1$TestClass.ic" NAME="TestClass Coverage Results" MODIFIED="1609888352894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
