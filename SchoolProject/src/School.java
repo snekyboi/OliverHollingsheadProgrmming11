@@ -15,6 +15,12 @@ public class School {
         this.courses = courses;
     }
 
+
+
+
+
+
+
     public void teacherAdder(Teacher newTeacher){
         teachers.add(newTeacher);
     }
