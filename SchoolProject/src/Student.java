@@ -1,5 +1,6 @@
 
 
+// this is where i define all the variables i will need to make a student
 public class Student {
     String firstName;
     String lastName;
@@ -7,6 +8,7 @@ public class Student {
     static int studentNum = 1;
     private int studentID;
 
+    // this is my constructor
     Student(String firstName, String lastName, int grade) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -42,7 +44,8 @@ public class Student {
         this.studentID = studentID;
     }
 
+    // this prints out the student's info in the specified format
     public String studentDescription(){
-        return "Name: " + firstName + lastName + " " + "Grade: " + grade;
+        return "Name: " + firstName + " " + lastName + "    " + "Grade: " + grade;
     }
 }
