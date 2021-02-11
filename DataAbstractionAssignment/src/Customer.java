@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Customer {
     private int accountNumber;
+    static int nextAccountID = 1;
     private ArrayList<Deposit> deposits;
     private ArrayList<Withdraw> withdraws;
     private double checkBalance;
@@ -14,17 +15,82 @@ public class Customer {
     public static final String SAVING = "Saving";
     private final int OVERDRAFT = -100;
 
-    Customer(){
-        //create default constructor
-    }
-    Customer(String name, int accountNumber, double checkDeposit, double savingDeposit){
-        //constructor code here
+    public double getCheckBalance() {
+        return checkBalance;
     }
 
+    public void setCheckBalance(double checkBalance) {
+        this.checkBalance = checkBalance;
+    }
+
+    public double getSavingBalance() {
+        return savingBalance;
+    }
+
+    public void setSavingBalance(double savingBalance) {
+        this.savingBalance = savingBalance;
+    }
+
+    public int depositCount(){
+        return deposits.size();
+    }
+
+    public int withdrawsCount(){
+        return withdraws.size();
+    }
+    Customer(){
+        //create default constructor
+        this.accountNumber = nextAccountID;
+        nextAccountID++;
+    }
+    Customer(String name, int accountNumber, double checkDeposit, double savingDeposit){
+        this.name = name;
+        this.accountNumber = accountNumber;
+        this.checkBalance = checkDeposit;
+        this.savingBalance = savingDeposit;
+        this.deposits = new ArrayList<>();
+        this.withdraws = new ArrayList<>();
+
+    }
+
+    // Requires: double ,date and string
+    // Modifies: account balance
+    // Effects: increases the balance of the account by making a deposit
     public double deposit(double amt, Date date, String account){
-        //your code here
+        if(amt <= 0){
+            return 0;
+        }
+        //System.out.println("Check1 " + checkBalance);
+        //System.out.println("Saving1 " + savingBalance);
+
+        if (!date.before(new Date())){
+            return 0;
+        }
+        //System.out.println("Check2 " + checkBalance);
+        //System.out.println("Saving2 " + savingBalance);
+
+        if (!account.equals(CHECKING) && !account.equals(SAVING)){
+            return 0;
+        }
+        //System.out.println("Check3 " + checkBalance);
+        //System.out.println("Saving3 " + savingBalance);
+
+        Deposit dep1 = new Deposit(amt, date, account);
+        deposits.add(dep1);
+        if(account == CHECKING){
+           checkBalance = checkBalance + amt;
+        }
+        else if(account == SAVING){
+            savingBalance = savingBalance + amt;
+        }
+        //System.out.println("Check " + checkBalance);
+        //System.out.println("Saving " + savingBalance);
+
         return 0;
     }
+    // Requires: double ,date and string
+    // Modifies: account balance
+    // Effects: decreases the balance of the account by making a withdraw
     public double withdraw(double amt, Date date, String account){
         //your code here
         return 0;
