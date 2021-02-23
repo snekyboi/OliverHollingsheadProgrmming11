@@ -18,7 +18,6 @@ public class Withdraw {
     // Modifies: nothing
     // Effects: returns a string about the withdrawal
     public String toString(){
-        //your code here
         return "Withdrawal of: $" + amount + " Date: " + date + " from account " + account;
     }
 }

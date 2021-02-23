@@ -63,7 +63,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.capture" />
   </component>
-  <component name="RunManager" selected="JUnit.CustomerTests.testCustomer">
+  <component name="RunManager" selected="JUnit.CustomerTests">
     <configuration name="CustomerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataAbstractionAssignment" />
       <option name="PACKAGE_NAME" value="" />
@@ -73,41 +73,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerTests.testCheckingSaving" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerTests.testCustomerChecking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataAbstractionAssignment" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CustomerTests" />
-      <option name="METHOD_NAME" value="testCheckingSaving" />
+      <option name="METHOD_NAME" value="testCustomerChecking" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerTests.testCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerTests.testCustomerSaving" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataAbstractionAssignment" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CustomerTests" />
-      <option name="METHOD_NAME" value="testCustomer" />
+      <option name="METHOD_NAME" value="testCustomerSaving" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerTests.testDates" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerTests.testMaxAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataAbstractionAssignment" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CustomerTests" />
-      <option name="METHOD_NAME" value="testDates" />
+      <option name="METHOD_NAME" value="testMaxAmount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerTests.testPastDates" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerTests.testWithdrawSaving" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataAbstractionAssignment" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CustomerTests" />
-      <option name="METHOD_NAME" value="testPastDates" />
+      <option name="METHOD_NAME" value="testWithdrawSaving" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerTests.testCustomer" />
         <item itemvalue="JUnit.CustomerTests" />
-        <item itemvalue="JUnit.CustomerTests.testCheckingSaving" />
-        <item itemvalue="JUnit.CustomerTests.testPastDates" />
-        <item itemvalue="JUnit.CustomerTests.testDates" />
+        <item itemvalue="JUnit.CustomerTests.testMaxAmount" />
+        <item itemvalue="JUnit.CustomerTests.testWithdrawSaving" />
+        <item itemvalue="JUnit.CustomerTests.testCustomerSaving" />
+        <item itemvalue="JUnit.CustomerTests.testCustomerChecking" />
       </list>
     </recent_temporary>
   </component>
@@ -165,38 +165,38 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="533" y="127" key="#com.intellij.ide.util.MemberChooser/0.23.1440.826@0.23.1440.826" timestamp="1612982533316" />
-    <state width="1398" height="355" key="GridCell.Tab.0.bottom" timestamp="1613067416820">
+    <state width="1398" height="373" key="GridCell.Tab.0.bottom" timestamp="1614106792411">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state width="1398" height="355" key="GridCell.Tab.0.bottom/0.23.1440.826@0.23.1440.826" timestamp="1613067416820" />
-    <state width="1398" height="355" key="GridCell.Tab.0.center" timestamp="1613067416817">
+    <state width="1398" height="373" key="GridCell.Tab.0.bottom/0.23.1440.826@0.23.1440.826" timestamp="1614106792411" />
+    <state width="1398" height="373" key="GridCell.Tab.0.center" timestamp="1614106792410">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state width="1398" height="355" key="GridCell.Tab.0.center/0.23.1440.826@0.23.1440.826" timestamp="1613067416817" />
-    <state width="1398" height="355" key="GridCell.Tab.0.left" timestamp="1613067416816">
+    <state width="1398" height="373" key="GridCell.Tab.0.center/0.23.1440.826@0.23.1440.826" timestamp="1614106792410" />
+    <state width="1398" height="373" key="GridCell.Tab.0.left" timestamp="1614106792408">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state width="1398" height="355" key="GridCell.Tab.0.left/0.23.1440.826@0.23.1440.826" timestamp="1613067416816" />
-    <state width="1398" height="355" key="GridCell.Tab.0.right" timestamp="1613067416818">
+    <state width="1398" height="373" key="GridCell.Tab.0.left/0.23.1440.826@0.23.1440.826" timestamp="1614106792408" />
+    <state width="1398" height="373" key="GridCell.Tab.0.right" timestamp="1614106792411">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state width="1398" height="355" key="GridCell.Tab.0.right/0.23.1440.826@0.23.1440.826" timestamp="1613067416818" />
-    <state width="1398" height="355" key="GridCell.Tab.1.bottom" timestamp="1613067416826">
+    <state width="1398" height="373" key="GridCell.Tab.0.right/0.23.1440.826@0.23.1440.826" timestamp="1614106792411" />
+    <state width="1398" height="373" key="GridCell.Tab.1.bottom" timestamp="1614106792413">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state width="1398" height="355" key="GridCell.Tab.1.bottom/0.23.1440.826@0.23.1440.826" timestamp="1613067416826" />
-    <state width="1398" height="355" key="GridCell.Tab.1.center" timestamp="1613067416823">
+    <state width="1398" height="373" key="GridCell.Tab.1.bottom/0.23.1440.826@0.23.1440.826" timestamp="1614106792413" />
+    <state width="1398" height="373" key="GridCell.Tab.1.center" timestamp="1614106792412">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state width="1398" height="355" key="GridCell.Tab.1.center/0.23.1440.826@0.23.1440.826" timestamp="1613067416823" />
-    <state width="1398" height="355" key="GridCell.Tab.1.left" timestamp="1613067416822">
+    <state width="1398" height="373" key="GridCell.Tab.1.center/0.23.1440.826@0.23.1440.826" timestamp="1614106792412" />
+    <state width="1398" height="373" key="GridCell.Tab.1.left" timestamp="1614106792412">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state width="1398" height="355" key="GridCell.Tab.1.left/0.23.1440.826@0.23.1440.826" timestamp="1613067416822" />
-    <state width="1398" height="355" key="GridCell.Tab.1.right" timestamp="1613067416825">
+    <state width="1398" height="373" key="GridCell.Tab.1.left/0.23.1440.826@0.23.1440.826" timestamp="1614106792412" />
+    <state width="1398" height="373" key="GridCell.Tab.1.right" timestamp="1614106792412">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state width="1398" height="355" key="GridCell.Tab.1.right/0.23.1440.826@0.23.1440.826" timestamp="1613067416825" />
+    <state width="1398" height="373" key="GridCell.Tab.1.right/0.23.1440.826@0.23.1440.826" timestamp="1614106792412" />
     <state x="221" y="75" key="SettingsEditor" timestamp="1613067161329">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
@@ -205,22 +205,6 @@
       <screen x="0" y="23" width="1440" height="827" />
     </state>
     <state x="417" y="336" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1440.827@0.23.1440.827" timestamp="1612889587775" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TestCases/CustomerTests.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TestCases/CustomerTests.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="masterDetails">
     <states>
