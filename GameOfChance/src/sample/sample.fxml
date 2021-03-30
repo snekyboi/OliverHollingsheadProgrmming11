@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="30.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="205.0" spacing="15.0">
+         <children>
+            <HBox prefHeight="46.0" prefWidth="205.0">
+               <children>
+                  <Label fx:id="lblMoneyCount" text="Your Money:" />
+               </children>
+            </HBox>
+            <Label />
+            <Label />
+            <Label />
+            <Label text="Croupier's roll:" />
+            <Label fx:id="lblCroupRoll" text="TBD" />
+            <Label />
+            <Label />
+            <Label />
+            <Label />
+            <Label />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="247.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <Label text="Will your roll be" />
+            <Button fx:id="btnHigher" mnemonicParsing="false" onAction="#youRollHigher" text="Higher" />
+            <Label text="Or" />
+            <Button fx:id="btnLower" mnemonicParsing="false" onAction="#youRollLower" text="Lower" />
+            <Label />
+            <Button fx:id="btnNewGame" mnemonicParsing="false" onAction="#croupRoll" text="New Game" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="193.0" spacing="15.0">
+         <children>
+            <Label text="Your roll:" />
+            <Label fx:id="lblYourRoll" text="TBD" />
+            <Label />
+         </children>
+      </VBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</HBox>
