@@ -44,6 +44,8 @@
                   <Label fx:id="lblFriendAge" layoutX="370.0" layoutY="120.0" text="Label" />
                   <Label fx:id="lblFriendGender" layoutX="370.0" layoutY="175.0" text="Label" />
                   <Button fx:id="btnDeleteFriend" layoutX="303.0" layoutY="249.0" mnemonicParsing="false" onAction="#deleteFriend" text="Delete Friend" />
+                  <Button fx:id="btnSaveFriend" layoutX="463.0" layoutY="82.0" mnemonicParsing="false" onAction="#saveFriend" text="Save" />
+                  <Button fx:id="btnLoadFriend" layoutX="463.0" layoutY="192.0" mnemonicParsing="false" onAction="#loadFriends" text="Load" />
                </children></AnchorPane>
       </content>
     </Tab>

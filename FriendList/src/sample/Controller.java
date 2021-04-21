@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -7,6 +8,12 @@ import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.ListView;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Observable;
 
 public class Controller {
     public TextField txtfldFriendName;
@@ -20,6 +27,8 @@ public class Controller {
     public RadioButton rbtnMale;
     public RadioButton rbtnOther;
     public ListView friendList = new ListView<>();
+    public Button btnSaveFriend;
+    public Button btnLoadFriend;
 
 
     @FXML
@@ -36,36 +45,22 @@ public class Controller {
     public String findGender(){
         String g = "heelo";
         if (rbtnFemale.isSelected()){
-            g = "Female";
+            g = "F";
         }
         if (rbtnMale.isSelected()){
-            g = "Male";
+            g = "M";
         }
         if (rbtnOther.isSelected()){
-            g = "Other";
+            g = "O";
         }
         return g;
     }
 
     public void createFriend(ActionEvent actionEvent) {
-        String n = txtfldFriendName.getText();
-        int a = Integer.parseInt(txtfldFriendAge.getText());
-        String g = "heelo";
-        if (rbtnFemale.isSelected()){
-            g = "Female";
-        }
-        if (rbtnMale.isSelected()){
-            g = "Male";
-        }
-        if (rbtnOther.isSelected()){
-            g = "Other";
-        }
-        Friend temp = new Friend(n, a, g);
-        btnCreateFriend.setDisable(true);
-        friendList.getItems().add(temp);
+        friendList.getItems().add(new Friend(txtfldFriendName.getText(), Integer.parseInt(txtfldFriendAge.getText()), findGender()));
         txtfldFriendName.clear();
         txtfldFriendAge.clear();
-
+        rbtnMale.setSelected(true);
     }
 
     public void displayInfo(MouseEvent mouseEvent) {
@@ -112,5 +107,27 @@ public class Controller {
         lblFiendName.setText(temp.name);
         lblFriendAge.setText(String.valueOf(temp.age));
         lblFriendGender.setText(temp.gender);
+    }
+
+    public void saveFriend(ActionEvent actionEvent) throws IOException {
+        // this function writes friends to friends.txt
+        ObservableList<Friend> myList = friendList.getItems();
+        FileWriter fw = new FileWriter("friends.txt", false);
+        BufferedWriter bw = new BufferedWriter(fw);
+        for (Friend f : myList){
+            f.writeToFile(bw);
+        }
+        bw.close();
+    }
+
+    public void loadFriends(ActionEvent actionEvent) throws IOException {
+        // To stop the user from having the ability to load multiple versions of the same friend
+        // I disabled the load button whenever you load because you should really only have to load
+        //the list once.
+        ArrayList<Friend> friends = CreateFriend.createAllFriends("friends.txt");
+        for (Friend f : friends){
+            friendList.getItems().add(f);
+        }
+        btnLoadFriend.setDisable(true);
     }
 }
