@@ -1,5 +1,9 @@
 package sample;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.util.Duration;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -24,8 +29,13 @@ public class Controller {
 
     @FXML
     public void initialize(){
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(timerTask, 0, 1000);
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), ev -> {
+            updateUI();
+        }));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+        /*Timer timer = new Timer();
+        timer.scheduleAtFixedRate(timerTask, 0, 1000);*/
     }
 
     public void cancelTimer(ActionEvent actionEvent) {
@@ -41,16 +51,25 @@ public class Controller {
         txtTimerLength.clear();
     }
 
+    public void updateUI() {
+        ObservableList<MyTimer> myList = timersList.getItems();
+        //timersList.getItems().clear();
+        for (MyTimer t : myList) {
+            t.decrement();
+            System.out.println(t.timeLeft);
+        }
+        timersList.refresh();
+    }
     TimerTask timerTask = new TimerTask()
     {
         public void run()
         {
-            ObservableList<MyTimer> myList = timersList.getItems();
-            for (MyTimer t : myList){
-                t.decrement();
-                System.out.println(t.timeLeft);
-            }
-
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    updateUI();
+                }
+            });
         }
     };
 }

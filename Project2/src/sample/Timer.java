@@ -44,6 +44,6 @@ class MyTimer {
     }*/
 
     public String toString (){
-        return "Timer for: " + name + "   Total Time: " + length + "  Time Left: " + timeLeft;
+        return name + "("+ length + ")  " +  timeLeft;
     }
 }
