@@ -56,7 +56,7 @@ public class Controller {
         //timersList.getItems().clear();
         for (MyTimer t : myList) {
             t.decrement();
-            System.out.println(t.timeLeft);
+            //System.out.println(t.timeLeft);
         }
         timersList.refresh();
     }

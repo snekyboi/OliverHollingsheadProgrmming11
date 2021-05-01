@@ -1,9 +1,10 @@
 package sample;
 
-class MyTimer {
+public class MyTimer {
     public String name;
-    public int length;
-    public boolean isDone = false;
+    public int length;// this is in minutes
+    public int timeLeft;// this is in seconds
+
 
     public int getTimeLeft() {
         return timeLeft;
@@ -13,22 +14,20 @@ class MyTimer {
         this.timeLeft = timeLeft;
     }
 
-    int timeLeft;
 
-
-    MyTimer (String n, int l){
+    public MyTimer (String n, int l){
         name = n;
         length = l;
-        timeLeft = length;
+        timeLeft = length*60;
+    }
 
+    public boolean isDone(){
+        return timeLeft == 0;
     }
 
     public void decrement(){
-        if(!isDone){
+        if (!isDone()){
             timeLeft--;
-        }
-        if(timeLeft == 0){
-            isDone = true;
         }
     }
 
@@ -44,6 +43,6 @@ class MyTimer {
     }*/
 
     public String toString (){
-        return name + "("+ length + ")  " +  timeLeft;
+        return name + "("+ length + "mins)  " +  timeLeft + "secs";
     }
 }
