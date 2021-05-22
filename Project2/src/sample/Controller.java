@@ -11,9 +11,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 
-import java.util.Timer;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.TimerTask;
 
 
@@ -25,17 +29,28 @@ public class Controller {
     public Button btnCreateTimer;
     public ListView timersList;
     public Label lblTimerAlert;
+    public TextField txtAlarmName;
+    public TextField txtAlarmTime;
+    public ListView alarmsList;
+    public Button btnCreateAlarm;
+    public Button btnCancelAlarm;
+    public TextField txtAlarmTimeM;
+    public Label lblCurrentTime;
+    public Label lblNextAlarm;
+    public Label lblNextTimer;
+    public Label doneAlert;
+    private CurrentTime clock;
 
 
     @FXML
-    public void initialize(){
+    public void initialize() throws IOException {
+        clock = new CurrentTime();
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), ev -> {
             updateUI();
         }));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
-        /*Timer timer = new Timer();
-        timer.scheduleAtFixedRate(timerTask, 0, 1000);*/
+        //loadAlarms();
     }
 
     public void cancelTimer(ActionEvent actionEvent) {
@@ -52,11 +67,19 @@ public class Controller {
     }
 
     public void updateUI() {
+        CurrentTime.updateTime();
+        showTime();
+        ObservableList<MyAlarm> alarms = alarmsList.getItems();
+        for (MyAlarm a : alarms) {
+            if (CurrentTime.isDone(a)){
+                doneAlert.setText("Alarm: " + a.name + " is done");
+            }
+
+        }
+
         ObservableList<MyTimer> myList = timersList.getItems();
-        //timersList.getItems().clear();
         for (MyTimer t : myList) {
             t.decrement();
-            //System.out.println(t.timeLeft);
         }
         timersList.refresh();
     }
@@ -72,4 +95,49 @@ public class Controller {
             });
         }
     };
+
+    public void createAlarm(ActionEvent actionEvent) throws IOException  {
+        MyAlarm newAlarm = new MyAlarm(txtAlarmName.getText(), Integer.parseInt(txtAlarmTime.getText()), Integer.parseInt(txtAlarmTimeM.getText()));
+        alarmsList.getItems().add(newAlarm);
+        txtAlarmName.clear();
+        txtAlarmTime.clear();
+        txtAlarmTimeM.clear();
+        newAlarm.writeToFile();
+    }
+
+    public void cancelAlarm(ActionEvent actionEvent) {
+        MyAlarm subject;
+            subject = (MyAlarm) alarmsList.getSelectionModel().getSelectedItem();
+            alarmsList.getItems().remove(subject);
+            btnCancelAlarm.setDisable(true);
+
+    }
+
+    public void showTime(){
+        lblCurrentTime.setText(CurrentTime.toStringTime());
+    }
+
+    public void saveAlarm(ActionEvent actionEvent) throws IOException {
+        ObservableList<MyAlarm> myList = alarmsList.getItems();
+        FileWriter fw = new FileWriter("alarms.txt", false);
+        BufferedWriter bw = new BufferedWriter(fw);
+        for (MyAlarm a : myList){
+            a.writeToFile();
+        }
+        bw.close();
+    }
+
+    public void loadAlarms() throws IOException {
+        ArrayList<MyAlarm> friends = LoadAlarms.createAllAlarms("alarms.txt");
+        for (MyAlarm f : friends){
+            alarmsList.getItems().add(f);
+        }
+    }
+    public void unDisableDltAlarm(MouseEvent mouseEvent) {
+        btnCreateAlarm.setDisable(false);
+    }
+
+    public void unDisableDltTimer(MouseEvent mouseEvent) {
+        btnCancelTimer.setDisable(false);
+    }
 }
