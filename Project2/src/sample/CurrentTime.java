@@ -28,7 +28,6 @@ public class CurrentTime {
         if (currentHour == a.hour && currentMinute == a.minute) {
             isDone = true;
         }
-        System.out.println(currentMinute);
         return isDone;
     }
 

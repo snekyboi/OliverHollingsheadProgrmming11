@@ -1,1 +1,1 @@
-bed11 : 05;
+bed21:30;diner17:30;school08:20;lunch01:00;

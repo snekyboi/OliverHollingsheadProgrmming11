@@ -41,10 +41,10 @@ public class LoadAlarms {
             if (string.substring(i, i+1).equals(",")){
                 pos = i;
                 name = string.substring(0, pos);
-                String hourTo = string.substring(pos + 1, pos + 2);
-                hour = Integer.parseInt(String.valueOf(pos + 1) + Integer.parseInt(String.valueOf(pos + 2)));
-                String minuteTo = string.substring(pos+3);
-                minute = Integer.parseInt(String.valueOf(pos+3));
+                String hourTo = string.substring(pos + 1, pos + 3);
+                hour = Integer.parseInt(hourTo);
+                String minuteTo = string.substring(pos+4, pos + 6);
+                minute = Integer.parseInt(minuteTo);
                 break;
             }
         }

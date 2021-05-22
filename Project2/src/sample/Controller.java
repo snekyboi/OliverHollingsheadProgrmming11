@@ -50,7 +50,7 @@ public class Controller {
         }));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
-        //loadAlarms();
+        loadAlarms();
     }
 
     public void cancelTimer(ActionEvent actionEvent) {
@@ -96,21 +96,30 @@ public class Controller {
         }
     };
 
+    public void writeAllAlarmsToFile() throws IOException  {
+        FileWriter fw = new FileWriter("alarms.txt", false);
+        BufferedWriter  bw = new BufferedWriter(fw);
+        ObservableList<MyAlarm> allAlarms = alarmsList.getItems();
+        for (MyAlarm a : allAlarms){
+            a.writeToFile(bw);
+        }
+        bw.close();
+    }
     public void createAlarm(ActionEvent actionEvent) throws IOException  {
         MyAlarm newAlarm = new MyAlarm(txtAlarmName.getText(), Integer.parseInt(txtAlarmTime.getText()), Integer.parseInt(txtAlarmTimeM.getText()));
         alarmsList.getItems().add(newAlarm);
         txtAlarmName.clear();
         txtAlarmTime.clear();
         txtAlarmTimeM.clear();
-        newAlarm.writeToFile();
+        writeAllAlarmsToFile();
     }
 
-    public void cancelAlarm(ActionEvent actionEvent) {
+    public void cancelAlarm(ActionEvent actionEvent) throws IOException {
         MyAlarm subject;
             subject = (MyAlarm) alarmsList.getSelectionModel().getSelectedItem();
             alarmsList.getItems().remove(subject);
             btnCancelAlarm.setDisable(true);
-
+            writeAllAlarmsToFile();
     }
 
     public void showTime(){
@@ -122,7 +131,7 @@ public class Controller {
         FileWriter fw = new FileWriter("alarms.txt", false);
         BufferedWriter bw = new BufferedWriter(fw);
         for (MyAlarm a : myList){
-            a.writeToFile();
+            a.writeToFile(bw);
         }
         bw.close();
     }

@@ -17,13 +17,10 @@ public class MyAlarm {
         minute = m;
     }
 
-    public void writeToFile() throws IOException {
-        FileWriter fw = new FileWriter("alarms.txt", false);
-        BufferedWriter bw = new BufferedWriter(fw);
+    public void writeToFile(BufferedWriter bw) throws IOException {
         bw.write(name + "\r");
         bw.write(formattedTime() + "\r");
         bw.write(";\r");
-        bw.close();
     }
     public String toString(){
         return "Alarm for: " + name + "  " + formattedTime();
