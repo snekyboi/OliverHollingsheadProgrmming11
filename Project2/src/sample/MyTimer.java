@@ -22,13 +22,18 @@ public class MyTimer {
     }
 
     public boolean isDone(){
-        return timeLeft == 0;
+        return timeLeft <= 0;
     }
 
     public void decrement(){
-        if (!isDone()){
+        if (!isReallyDone()){
             timeLeft--;
         }
+    }
+
+    // i use this to figure out when the timer is done alert should go away
+    public boolean isReallyDone(){
+        return timeLeft <= -60;
     }
 
     /*public void countdown (int length) throws InterruptedException {
@@ -43,6 +48,10 @@ public class MyTimer {
     }*/
 
     public String toString (){
-        return name + "("+ length + "mins)  " +  timeLeft + "secs";
+        int actualTimeLeft = timeLeft;
+        if (actualTimeLeft < 0){
+            actualTimeLeft = 0;
+        }
+        return name + "("+ length + "mins)  " +  actualTimeLeft + "secs";
     }
 }

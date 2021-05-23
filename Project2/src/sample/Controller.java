@@ -39,6 +39,7 @@ public class Controller {
     public Label lblNextAlarm;
     public Label lblNextTimer;
     public Label doneAlert;
+    public Label doneAlertTimer;
     private CurrentTime clock;
 
 
@@ -70,16 +71,23 @@ public class Controller {
         CurrentTime.updateTime();
         showTime();
         ObservableList<MyAlarm> alarms = alarmsList.getItems();
+        doneAlert.setText("");
+        doneAlertTimer.setText("");
         for (MyAlarm a : alarms) {
             if (CurrentTime.isDone(a)){
                 doneAlert.setText("Alarm: " + a.name + " is done");
             }
-
         }
 
         ObservableList<MyTimer> myList = timersList.getItems();
         for (MyTimer t : myList) {
             t.decrement();
+            if (t.isDone()){
+                doneAlertTimer.setText("Timer: " + t.name + " is done");
+            }
+            if (t.isReallyDone()){
+                doneAlertTimer.setText("");
+            }
         }
         timersList.refresh();
     }
@@ -143,7 +151,7 @@ public class Controller {
         }
     }
     public void unDisableDltAlarm(MouseEvent mouseEvent) {
-        btnCreateAlarm.setDisable(false);
+        btnCancelAlarm.setDisable(false);
     }
 
     public void unDisableDltTimer(MouseEvent mouseEvent) {

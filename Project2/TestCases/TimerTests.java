@@ -31,4 +31,12 @@ public class TimerTests{
         }
         assertTrue(test.isDone());
     }
+
+    @Test
+    public void testIsraeliDone(){
+        test.timeLeft = -59;
+        assertFalse(test.isReallyDone());
+        test.decrement();
+        assertTrue(test.isReallyDone());
+    }
 }
