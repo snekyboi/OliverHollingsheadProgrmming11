@@ -14,6 +14,10 @@ public class LoadAlarms {
     private static BufferedReader br;
     private static ArrayList<MyAlarm> alarms = new ArrayList<>();
 
+
+    //Requires: a file name
+    //Modifies: nothing
+    // Effects: reads the file and makes each alarm into it's own string
     public static ArrayList createAllAlarms (String fileName) throws IOException {
         fr = new FileReader(fileName);
         br = new BufferedReader(fr);
@@ -31,7 +35,9 @@ public class LoadAlarms {
     }
 
 
-
+    //Requires: a string
+    //Modifies: that string
+    // Effects: makes the info from the file into alarms to be put on the ArrayList
     private static void parseAlarm(String string){
         int pos = 0;
         String name = "";

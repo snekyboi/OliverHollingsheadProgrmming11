@@ -43,6 +43,9 @@ public class Controller {
     private CurrentTime clock;
 
 
+    //Requires: nothing
+    //Modifies: nothing
+    // Effects: loads alarms to the list view and calls updateUI every second
     @FXML
     public void initialize() throws IOException {
         clock = new CurrentTime();
@@ -54,6 +57,10 @@ public class Controller {
         loadAlarms();
     }
 
+
+    //Requires: the user to hit a button
+    //Modifies: the list view
+    //Effects: removes a timer to the list view
     public void cancelTimer(ActionEvent actionEvent) {
     MyTimer subject;
         subject = (MyTimer)timersList.getSelectionModel().getSelectedItem();
@@ -61,12 +68,18 @@ public class Controller {
         btnCancelTimer.setDisable(true);
     }
 
+    //Requires: the user to hit a button
+    //Modifies: the list view
+    //Effects: adds a timer to the list view
     public void createTimer(ActionEvent actionEvent) {
         timersList.getItems().add(new MyTimer(txtTimerName.getText(), Integer.parseInt(txtTimerLength.getText())));
         txtTimerName.clear();
         txtTimerLength.clear();
     }
 
+    //Requires: nothing
+    //Modifies: the list views and a few labels
+    //Effects: makes sure that the ui is showing the right info
     public void updateUI() {
         CurrentTime.updateTime();
         showTime();
@@ -104,6 +117,9 @@ public class Controller {
         }
     };
 
+    //Requires: nothing
+    //Modifies: alarms.txt
+    //Effects: writes all the alarms in the list view to alarms.txt
     public void writeAllAlarmsToFile() throws IOException  {
         FileWriter fw = new FileWriter("alarms.txt", false);
         BufferedWriter  bw = new BufferedWriter(fw);
@@ -113,6 +129,10 @@ public class Controller {
         }
         bw.close();
     }
+
+    //Requires: the user to hit a button
+    //Modifies: the list view
+    //Effects: adds an alarm to alarms.txt and to and the list view
     public void createAlarm(ActionEvent actionEvent) throws IOException  {
         MyAlarm newAlarm = new MyAlarm(txtAlarmName.getText(), Integer.parseInt(txtAlarmTime.getText()), Integer.parseInt(txtAlarmTimeM.getText()));
         alarmsList.getItems().add(newAlarm);
@@ -122,6 +142,9 @@ public class Controller {
         writeAllAlarmsToFile();
     }
 
+    //Requires: the user to hit a button
+    //Modifies: the list view
+    //Effects: removes an alarm from alarms.txt and from the list view
     public void cancelAlarm(ActionEvent actionEvent) throws IOException {
         MyAlarm subject;
             subject = (MyAlarm) alarmsList.getSelectionModel().getSelectedItem();
@@ -130,11 +153,14 @@ public class Controller {
             writeAllAlarmsToFile();
     }
 
+    //Requires: nothing
+    //Modifies: nothing
+    //Effects: shows the time by setting a label's text
     public void showTime(){
         lblCurrentTime.setText(CurrentTime.toStringTime());
     }
 
-    public void saveAlarm(ActionEvent actionEvent) throws IOException {
+    /*public void saveAlarm(ActionEvent actionEvent) throws IOException {
         ObservableList<MyAlarm> myList = alarmsList.getItems();
         FileWriter fw = new FileWriter("alarms.txt", false);
         BufferedWriter bw = new BufferedWriter(fw);
@@ -142,18 +168,28 @@ public class Controller {
             a.writeToFile(bw);
         }
         bw.close();
-    }
+    }*/
 
+    //Requires: nothing
+    //Modifies: the list view
+    //Effects: brings all the alarms in alarms.txt to the list view
     public void loadAlarms() throws IOException {
         ArrayList<MyAlarm> friends = LoadAlarms.createAllAlarms("alarms.txt");
         for (MyAlarm f : friends){
             alarmsList.getItems().add(f);
         }
     }
+
+    //Requires: the user to click on the list view
+    //Modifies: the cancel alarm button
+    //Effects: enables the cancel alarm button
     public void unDisableDltAlarm(MouseEvent mouseEvent) {
         btnCancelAlarm.setDisable(false);
     }
 
+    //Requires: the user to click on the list view
+    //Modifies: the cancel timer button
+    //Effects: enables the cancel timer button
     public void unDisableDltTimer(MouseEvent mouseEvent) {
         btnCancelTimer.setDisable(false);
     }

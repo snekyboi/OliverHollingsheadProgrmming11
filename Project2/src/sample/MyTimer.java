@@ -6,13 +6,6 @@ public class MyTimer {
     public int timeLeft;// this is in seconds
 
 
-    public int getTimeLeft() {
-        return timeLeft;
-    }
-
-    public void setTimeLeft(int timeLeft) {
-        this.timeLeft = timeLeft;
-    }
 
 
     public MyTimer (String n, int l){
@@ -21,17 +14,25 @@ public class MyTimer {
         timeLeft = length*60;
     }
 
+    //Requires: nothing
+    //Modifies: nothing
+    // Effects: checks if a timer is done
     public boolean isDone(){
         return timeLeft <= 0;
     }
 
+    //Requires: nothing
+    //Modifies: timeLeft
+    // Effects: makes the timer's time left decrease
     public void decrement(){
         if (!isReallyDone()){
             timeLeft--;
         }
     }
 
-    // i use this to figure out when the timer is done alert should go away
+    //Requires: nothing
+    //Modifies: nothing
+    // Effects: figures out when the timer is done alert should go away
     public boolean isReallyDone(){
         return timeLeft <= -60;
     }
@@ -47,6 +48,9 @@ public class MyTimer {
 
     }*/
 
+    //Requires: nothing
+    //Modifies: the way the computer sees timers
+    // Effects: changes the way the computer sees timers
     public String toString (){
         int actualTimeLeft = timeLeft;
         if (actualTimeLeft < 0){
